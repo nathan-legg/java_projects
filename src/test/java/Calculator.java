@@ -5,35 +5,43 @@ public class Calculator {
     public static void main(String args[]) {
 
         Scanner sc = new Scanner(System.in);
+
+        int selection;
         double fnum, snum, answer;
-        int option;
-        System.out.println("Enter first number: ");
+
+        //Take an input from the user
+        System.out.println("Select an operation.");
+        System.out.println("1.Add");
+        System.out.println("2.Subtract");
+        System.out.println("3.Multiply");
+        System.out.println("4.Divide");
+        System.out.print("Enter choice(1/2/3/4): ");
+        selection = sc.nextInt();
+
+        System.out.print("Enter first number: ");
         fnum = sc.nextDouble();
-        System.out.println("Enter second number: ");
+        System.out.print("Enter second number: ");
         snum = sc.nextDouble();
 
-        System.out.println("Add(1)\nSubtract(2)\nMultiply(3)\nDivide(4)\nSelect your option: ");
-        option = sc.nextInt();
-
-        switch (option) {
+        switch (selection) {
             case 1:
                 answer = fnum + snum;
-                System.out.println("\n" + fnum + " + " + snum + " = " + answer);
+                System.out.print(fnum + " + " + snum + " = " + answer);
                 break;
             case 2:
                 answer = fnum - snum;
-                System.out.println("\n" + fnum + " - " + snum + " = " + answer);
+                System.out.print(fnum + " - " + snum + " = " + answer);
                 break;
             case 3:
                 answer = fnum * snum;
-                System.out.println("\n" + fnum + " * " + snum + " = " + answer);
+                System.out.print(fnum + " * " + snum + " = " + answer);
                 break;
             case 4:
                 answer = fnum / snum;
-                System.out.println("\n" + fnum + " / " + snum + " = " + answer);
+                System.out.print(fnum + " / " + snum + " = " + answer);
                 break;
             default:
-                System.out.println("\nInvalid option was selected");
+                System.out.print("Invalid option was selected");
                 break;
         }
 
