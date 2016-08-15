@@ -16,7 +16,7 @@ public class DuplicateArray {
     public static void main(String[] args) {
 
         //set up an unsorted array
-        int[] numArray = new int[]{7, 0, 1, 2, 2, 1, 3, 5, 4};
+        int[] numArray = new int[]{7, 0, 1, 2, 2, 1, 3, 5, 4, 6, 6};
         //create list
         List<Integer> list = new ArrayList<Integer>();
 
@@ -48,7 +48,7 @@ public class DuplicateArray {
 
         }
 
-        //print out the sorted list array
+        //print out the sorted list
         System.out.print("\nNew sorted array: ");
         for (Integer aList : list) {
             System.out.print(" " + aList);
